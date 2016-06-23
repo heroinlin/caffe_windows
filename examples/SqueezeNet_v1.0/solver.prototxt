@@ -1,0 +1,25 @@
+# please cite:
+# @article{SqueezeNet,
+#     Author = {Forrest N. Iandola and Matthew W. Moskewicz and Khalid Ashraf and Song Han and William J. Dally and Kurt Keutzer},
+#     Title = {SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and $<$1MB model size},
+#     Journal = {arXiv:1602.07360},
+#     Year = {2016}
+# }
+net: "examples/SqueezeNet_v1.0/train_val1.prototxt" #we typically do `cd SqueezeNet_v1.0; caffe train <args>` 
+test_iter: 100 #not subject to iter_size
+test_interval: 500
+base_lr: 0.01
+momentum: 0.9
+weight_decay: 0.0005
+lr_policy: "inv"
+display: 100
+max_iter: 10000
+snapshot: 5000
+#snapshot_format: HDF5
+snapshot_prefix: "examples/SqueezeNet_v1.0/lenet"
+solver_mode: GPU
+iter_size: 16 #global batch size = batch_size * iter_size
+power: 0.75 #linearly decrease LR
+random_seed: 42
+test_initialization: false
+average_loss: 40
