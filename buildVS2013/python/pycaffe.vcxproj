@@ -89,6 +89,8 @@
     <OutDir>../../bin\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Jane\Anaconda3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Jane\Anaconda3\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>../../bin\</OutDir>
@@ -101,6 +103,8 @@
     <LinkIncremental>false</LinkIncremental>
     <TargetName>_caffe</TargetName>
     <TargetExt>.pyd</TargetExt>
+    <IncludePath>C:\Users\Jane\Anaconda3\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Jane\Anaconda3\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
